@@ -1,0 +1,5 @@
+BATT0 Icon "icons\\battery_0.ico"
+BATT1 Icon "icons\\battery_1.ico"
+BATT2 Icon "icons\\battery_2.ico"
+BATT3 Icon "icons\\battery_3.ico"
+BATT4 Icon "icons\\battery_full.ico"

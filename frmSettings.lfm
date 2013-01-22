@@ -1,0 +1,207 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Settings'
+  ClientHeight = 268
+  ClientWidth = 454
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 66
+    Height = 13
+    Caption = 'Transparency'
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 40
+    Width = 28
+    Height = 13
+    Caption = 'Width'
+  end
+  object Label3: TLabel
+    Left = 8
+    Top = 64
+    Width = 31
+    Height = 13
+    Caption = 'Height'
+  end
+  object Label4: TLabel
+    Left = 8
+    Top = 89
+    Width = 40
+    Height = 13
+    Caption = 'Minimum'
+  end
+  object Label5: TLabel
+    Left = 127
+    Top = 35
+    Width = 12
+    Height = 13
+    Caption = 'px'
+  end
+  object Label6: TLabel
+    Left = 127
+    Top = 62
+    Width = 34
+    Height = 13
+    Caption = 'px'
+  end
+  object Label7: TLabel
+    Left = 127
+    Top = 90
+    Width = 11
+    Height = 13
+    Caption = '%'
+  end
+  object tbAlpha: TTrackBar
+    Left = 112
+    Top = 5
+    Width = 206
+    Height = 21
+    Max = 255
+    Min = 10
+    Frequency = 10
+    Position = 10
+    ShowSelRange = False
+    TabOrder = 0
+    OnChange = tbAlphaChange
+  end
+  object btnOk: TButton
+    Left = 232
+    Top = 239
+    Width = 94
+    Height = 25
+    Caption = 'Ok'
+    TabOrder = 4
+    OnClick = btnOkClick
+  end
+  object edtAlpha: TEdit
+    Left = 80
+    Top = 8
+    Width = 27
+    Height = 21
+    TabStop = False
+    ReadOnly = True
+    TabOrder = 6
+    Text = 'edtAlpha'
+  end
+  object edtWidth: TEdit
+    Left = 80
+    Top = 32
+    Width = 41
+    Height = 21
+    TabOrder = 1
+    Text = 'edtWidth'
+  end
+  object edtHeight: TEdit
+    Left = 80
+    Top = 59
+    Width = 41
+    Height = 21
+    TabOrder = 2
+    Text = 'edtHeight'
+  end
+  object edtBatteryMin: TEdit
+    Left = 80
+    Top = 85
+    Width = 41
+    Height = 21
+    TabOrder = 3
+    Text = 'edtBatteryMin'
+  end
+  object btnCancel: TButton
+    Left = 137
+    Top = 239
+    Width = 89
+    Height = 25
+    Caption = 'Cancel'
+    TabOrder = 5
+    OnClick = btnCancelClick
+  end
+  object gbxSound: TGroupBox
+    Left = 8
+    Top = 112
+    Width = 312
+    Height = 121
+    Caption = 'Sound'
+    TabOrder = 7
+    object lblSound1Percent: TLabel
+      Left = 14
+      Top = 26
+      Width = 37
+      Height = 13
+      Caption = 'Percent'
+    end
+    object lblSound1File: TLabel
+      Left = 14
+      Top = 52
+      Width = 46
+      Height = 13
+      Caption = 'Media-file'
+    end
+    object cbxSound1: TCheckBox
+      Left = 14
+      Top = 2
+      Width = 97
+      Height = 17
+      Caption = 'enable'
+      TabOrder = 0
+    end
+    object edtSound1Percent: TEdit
+      Left = 66
+      Top = 25
+      Width = 40
+      Height = 21
+      TabOrder = 1
+      Text = 'edtSound1Percent'
+    end
+    object edtSound1File: TEdit
+      Left = 66
+      Top = 52
+      Width = 201
+      Height = 21
+      TabOrder = 2
+      Text = 'edtSound1File'
+    end
+    object btnSound1Select: TButton
+      Left = 273
+      Top = 53
+      Width = 34
+      Height = 21
+      Caption = 'open'
+      TabOrder = 3
+      OnClick = btnSound1SelectClick
+    end
+    object btnSound1Test: TButton
+      Left = 66
+      Top = 79
+      Width = 41
+      Height = 23
+      Caption = 'test'
+      TabOrder = 4
+      OnClick = btnSound1TestClick
+    end
+  end
+  object cbxShowText: TCheckBox
+    Left = 349
+    Top = 8
+    Width = 97
+    Height = 17
+    Caption = 'Show Text'
+    TabOrder = 8
+  end
+  object dlgOpen1: TOpenDialog
+    Left = 272
+    Top = 40
+  end
+end

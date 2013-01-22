@@ -1,0 +1,108 @@
+object Form1: TForm1
+  Left = 0
+  Height = 15
+  Top = 0
+  Width = 130
+  AlphaBlend = True
+  AlphaBlendValue = 200
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Form1'
+  ClientHeight = 15
+  ClientWidth = 130
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  FormStyle = fsStayOnTop
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PopupMenu = PopupMenu1
+  Position = poDefaultSizeOnly
+  LCLVersion = '1.1'
+  object Image1: TImage
+    Left = 0
+    Height = 15
+    Hint = '?????'
+    Top = 0
+    Width = 130
+    Align = alClient
+    OnMouseDown = Image1MouseDown
+    OnMouseMove = Image1MouseMove
+    OnMouseUp = Image1MouseUp
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object lblCharge: TLabel
+    Left = 2
+    Height = 15
+    Top = -1
+    Width = 10
+    Caption = '??'
+    Font.Color = clMaroon
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpFixed
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = Image1MouseDown
+  end
+  object PopupMenu1: TPopupMenu
+    left = 24
+    top = 104
+    object itemShowHide: TMenuItem
+      Caption = 'Hide'
+      OnClick = itemShowHideClick
+    end
+    object itemSettings: TMenuItem
+      Caption = 'Settings'
+      OnClick = itemSettingsClick
+    end
+    object itemAbout: TMenuItem
+      Caption = 'About'
+      OnClick = itemAboutClick
+    end
+    object itemExit: TMenuItem
+      Caption = 'Exit'
+      OnClick = itemExitClick
+    end
+  end
+  object TrayIcon1: TTrayIcon
+    PopUpMenu = PopupMenu2
+    Visible = True
+    OnDblClick = TrayIcon1DblClick
+    left = 88
+    top = 160
+  end
+  object timerUpdate: TTimer
+    Interval = 2000
+    OnTimer = timerUpdateTimer
+    left = 88
+    top = 104
+  end
+  object PopupMenu2: TPopupMenu
+    left = 24
+    top = 160
+    object itemShowHide2: TMenuItem
+      Caption = 'Hide'
+      OnClick = itemShowHideClick
+    end
+    object itemSettings2: TMenuItem
+      Caption = 'Settings'
+      OnClick = itemSettingsClick
+    end
+    object itemAbout2: TMenuItem
+      Caption = 'About'
+      OnClick = itemAboutClick
+    end
+    object itemExit2: TMenuItem
+      Caption = 'Exit'
+      OnClick = itemExitClick
+    end
+    object itemDebug2: TMenuItem
+      Caption = 'Debug'
+      OnClick = itemDebugClick
+    end
+  end
+end
