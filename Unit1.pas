@@ -17,6 +17,7 @@ type
     itemExit: TMenuItem;
     itemAbout: TMenuItem;
     itemSettings: TMenuItem;
+    Timer1: TTimer;
     TrayIcon1: TTrayIcon;
     timerUpdate: TTimer;
     lblCharge: TLabel;
@@ -39,6 +40,7 @@ type
     procedure itemSettingsClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
     procedure timerUpdateTimer(Sender: TObject);
     procedure TrayIcon1DblClick(Sender: TObject);
     procedure itemShowHideClick(Sender: TObject);
@@ -180,8 +182,15 @@ begin
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
+var
+  h,p: HWND;
 begin
   //ShowWindow(Application.MainForm.Handle, SW_HIDE);
+  //ShowWindowAsync(TWin32WidgetSet(WidgetSet).AppHandle, SW_HIDE);
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
   ShowWindowAsync(TWin32WidgetSet(WidgetSet).AppHandle, SW_HIDE);
 end;
 

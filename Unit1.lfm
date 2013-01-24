@@ -20,6 +20,7 @@ object Form1: TForm1
   OnShow = FormShow
   PopupMenu = PopupMenu1
   Position = poDefaultSizeOnly
+  ShowInTaskBar = stNever
   LCLVersion = '1.1'
   object Image1: TImage
     Left = 0
@@ -104,5 +105,11 @@ object Form1: TForm1
       Caption = 'Debug'
       OnClick = itemDebugClick
     end
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    left = 107
+    top = 9
   end
 end
