@@ -8,11 +8,10 @@
       <Unit0>
         <Filename Value="LpBattery.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="8"/>
-        <CursorPos X="26" Y="20"/>
+        <TopLine Value="7"/>
+        <CursorPos X="44" Y="23"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -24,10 +23,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="16" Y="2"/>
+        <TopLine Value="287"/>
+        <CursorPos X="36" Y="8"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -63,7 +63,7 @@
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="4" HistoryIndex="3">
+    <JumpHistory Count="7" HistoryIndex="6">
       <Position1>
         <Filename Value="LpBattery.lpr"/>
         <Caret Line="1" Column="1" TopLine="1"/>
@@ -80,6 +80,18 @@
         <Filename Value="LpBattery.lpr"/>
         <Caret Line="28" Column="1" TopLine="8"/>
       </Position4>
+      <Position5>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="2" Column="16" TopLine="48"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="184" Column="5" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Unit1.pas"/>
+        <Caret Line="8" Column="26" TopLine="1"/>
+      </Position7>
     </JumpHistory>
   </ProjectSession>
   <EditorMacros Count="0"/>

@@ -21,7 +21,6 @@ uses
 
 begin
   Application.Initialize;
-  Application.MainFormOnTaskbar := False;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TForm2, Form2);
   Application.Run;

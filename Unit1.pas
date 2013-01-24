@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, Menus, frmSettings, uSettings,
-  MMSystem;
+  MMSystem, InterfaceBase, win32int;
 
 type
 
@@ -181,7 +181,8 @@ end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-  ShowWindow(Application.MainForm.Handle, SW_HIDE);
+  //ShowWindow(Application.MainForm.Handle, SW_HIDE);
+  ShowWindowAsync(TWin32WidgetSet(WidgetSet).AppHandle, SW_HIDE);
 end;
 
 procedure TForm1.Image1MouseDown(Sender: TObject; Button: TMouseButton;
