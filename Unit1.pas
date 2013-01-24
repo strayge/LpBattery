@@ -189,6 +189,8 @@ begin
   ShowWindow(h,SW_HIDE);
   SetWindowLong(h, GWL_EXSTYLE, GetWindowLong(h, GWL_EXSTYLE) and not WS_EX_APPWINDOW or WS_EX_TOOLWINDOW);
   ShowWindow(h,SW_SHOWNA);
+
+  Form1.FormStyle:=fsSystemStayOnTop;
 end;
 
 procedure TForm1.Image1MouseDown(Sender: TObject; Button: TMouseButton;

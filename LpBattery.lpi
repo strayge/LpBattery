@@ -24,7 +24,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="4"/>
-      <BuildNr Value="8"/>
+      <BuildNr Value="10"/>
       <StringTable CompanyName="Str@y" InternalName="LpBattery" OriginalFilename="LpBattery.exe" ProductName="LpBattery" ProductVersion="0.1"/>
     </VersionInfo>
     <BuildModes Count="1">
