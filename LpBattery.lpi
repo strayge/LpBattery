@@ -14,6 +14,7 @@
       <Title Value="LpBattery"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
       <Icon Value="0"/>
     </General>
     <i18n>
@@ -23,7 +24,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="4"/>
-      <BuildNr Value="7"/>
+      <BuildNr Value="8"/>
       <StringTable CompanyName="Str@y" InternalName="LpBattery" OriginalFilename="LpBattery.exe" ProductName="LpBattery" ProductVersion="0.1"/>
     </VersionInfo>
     <BuildModes Count="1">

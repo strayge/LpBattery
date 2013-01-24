@@ -17,7 +17,6 @@ type
     itemExit: TMenuItem;
     itemAbout: TMenuItem;
     itemSettings: TMenuItem;
-    Timer1: TTimer;
     TrayIcon1: TTrayIcon;
     timerUpdate: TTimer;
     lblCharge: TLabel;
@@ -39,9 +38,8 @@ type
     procedure itemAboutClick(Sender: TObject);
     procedure itemSettingsClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure FormShow(Sender: TObject);
-    procedure Timer1Timer(Sender: TObject);
     procedure timerUpdateTimer(Sender: TObject);
+    procedure TrayIcon1Click(Sender: TObject);
     procedure TrayIcon1DblClick(Sender: TObject);
     procedure itemShowHideClick(Sender: TObject);
     procedure itemDebugClick(Sender: TObject);
@@ -153,6 +151,11 @@ begin
   UpdateInfo();
 end;
 
+procedure TForm1.TrayIcon1Click(Sender: TObject);
+begin
+  Form1.SetFocus;
+end;
+
 procedure TForm1.TrayIcon1DblClick(Sender: TObject);
 begin
   SetShowWindow(not Form1.Showing);
@@ -166,6 +169,8 @@ begin
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
+var
+  h: hwnd;
 begin
   itemDebug2.Visible:=debug;
 
@@ -179,19 +184,11 @@ begin
 
   // UpdateInfo();
   application.HintPause := 50;
-end;
 
-procedure TForm1.FormShow(Sender: TObject);
-var
-  h,p: HWND;
-begin
-  //ShowWindow(Application.MainForm.Handle, SW_HIDE);
-  //ShowWindowAsync(TWin32WidgetSet(WidgetSet).AppHandle, SW_HIDE);
-end;
-
-procedure TForm1.Timer1Timer(Sender: TObject);
-begin
-  ShowWindowAsync(TWin32WidgetSet(WidgetSet).AppHandle, SW_HIDE);
+  h:=TWin32WidgetSet(WidgetSet).AppHandle;
+  ShowWindow(h,SW_HIDE);
+  SetWindowLong(h, GWL_EXSTYLE, GetWindowLong(h, GWL_EXSTYLE) and not WS_EX_APPWINDOW or WS_EX_TOOLWINDOW);
+  ShowWindow(h,SW_SHOWNA);
 end;
 
 procedure TForm1.Image1MouseDown(Sender: TObject; Button: TMouseButton;
